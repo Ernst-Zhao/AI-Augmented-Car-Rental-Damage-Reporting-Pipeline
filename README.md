@@ -47,3 +47,28 @@ The primary goal is to streamline and improve the efficiency and accuracy of ide
 - User adoption: Resistance from staff to new processes or tools.
 - Cost overruns: Unforeseen development and maintenance costs.
 - Scalability: The solution may not scale effectively with a growing fleet or increasing transaction volume.
+
+## Prompt2:
+Load the data in this file. Understand and summarise the data
+## Output2:
+I will start by loading the 'Damage list.xlsx' file and performing an initial exploration to understand its structure and columns. This will allow me to provide you with an accurate summary for your project.
+I have successfully loaded and performed an initial analysis of the Damage list.xlsx file. Here is a summary of what the data contains:
+Data Summary
+The file tracks vehicle damages reported on September 17th, 2025, at the ORD Location.
+Structure: The dataset contains 27 entries and 12 columns. Currently, the headers are not correctly aligned because the first row of the Excel file actually contains the column titles (e.g., Rental Agreement no., Return Date, Vehicle category).
+Key Information Captured:
+Rental Details: Rental Agreement number and Return Date.
+Vehicle Specs: Category (Economy, Compact, Luxury, etc.), Make (Toyota, Honda, BMW, etc.), Model, and License Plate.
+Damage Details: Damage Type (Dent, Scratch), Car Part affected (Bumper, Door, Fender), and the Action taken (Repair or Replace).
+Financials: The amount charged for the damage and the payment method used (Credit Card, Debit Card).
+Initial Observations for the Checklist
+Cleaning Needed: Row 0 contains the headers, and there is a summary total row at the bottom (Row 26) which lists a total charged amount of 15,170. We should remove these for analysis.
+Missing Values: There are minor missing values (e.g., row 0 having no index number) which is expected given the Excel formatting.
+Would you like me to clean the data (set the correct headers and remove the total row) so we can proceed with specific calculations for your assignment?
+As a next step in our assignment workflow, I will clean the dataset. I'll promote the first row to headers, remove the summary total row at the bottom, and ensure the 'Charged amount' is a numeric type. This will provide a clean foundation for our analytics and AI tasks.
+I have successfully cleaned the data. The dataset is now structured correctly with 25 individual damage records. All financial values have been converted to numbers, and metadata (like the original header row and the summary totals) has been removed to prevent skewed analysis.
+Cleaned Data Summary:
+Total Records: 25 rental agreements with reported damage.
+Key Features: You now have clean access to Vehicle category, Damage type, Car part, and Charged amount $ columns.
+Sample Insight: The first few records show repair costs ranging from $180 (scratch on a Toyota Corolla fender) to $$180 (scratch on a Toyota Corolla fender) to $1,200 (dent replacement on a BMW 5 Series rear bumper).
+With this clean cleaned_df variable, we are ready to perform the specific calculations or AI-related tasks outlined in your project checklist.
